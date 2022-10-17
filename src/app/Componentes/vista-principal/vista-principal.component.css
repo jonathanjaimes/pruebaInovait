@@ -1,0 +1,104 @@
+.contenedorModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.303);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenidoModal {
+  position: relative;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px rgb(237, 237, 237);
+  border-top-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  margin: 50px 20px;
+}
+
+.contenedorHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 135, 159);
+  padding: 10px;
+  border-top-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+}
+
+.contenedorHeader p {
+  color: #fff;
+}
+
+.contenedorSubHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+  background-color: rgb(237, 237, 237);
+}
+
+.contenedorSubHeader p {
+  width: 150px;
+  text-align: center;
+}
+
+.contenedorSubHeaderItems {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+
+.listaItems {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 15px 10px;
+  border-top: 1px solid rgb(225, 225, 225);
+}
+
+.listaItems p {
+  width: 150px;
+  word-break: break-word;
+  margin: 0;
+}
+
+.contenedorVacio {
+  padding: 40px 0;
+  background-color: rgb(251, 251, 251);
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+
+.contenedorVacio p {
+  text-align: center;
+  color: rgb(197, 197, 197);
+}
+
+.opciones {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opciones p {
+  cursor: pointer;
+  margin: 0;
+}
+
+.btnAgregar {
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<div class="contenedorPrincipal">
+  <div class="contenedorHeader">
+    <p>Estudiantes</p>
+    <div>
+      <p (click)="banderaModal = true" class="btnAgregar">Agregar estudiante</p>
+    </div>
+  </div>
+  <div class="contenedorSubHeaderItems">
+    <div class="contenedorSubHeader">
+      <p>Apellido</p>
+      <p>Nombre</p>
+      <p>Colegio</p>
+      <p style="width: 50px; text-align: center">Grado</p>
+      <p>Profesor</p>
+      <p>Opciones</p>
+    </div>
+    <div *ngFor="let estudiante of listaEstudiantes" class="listaItems">
+      <p>
+        {{ estudiante.nombre }}
+      </p>
+      <p>
+        {{ estudiante.apellido }}
+      </p>
+      <p>
+        {{ estudiante.colegio }}
+      </p>
+      <p style="width: 50px; word-break: break-word; margin: 0">
+        {{ estudiante.grado }}
+      </p>
+      <p>
+        {{ estudiante.profesor }}
+      </p>
+      <div class="opciones">
+        <p (click)="editarEstudiante(estudiante)">Editar</p>
+        <p (click)="eliminarEstudiante(estudiante)">Eliminar</p>
+      </div>
+    </div>
+    <div class="contenedorVacio" *ngIf="listaEstudiantes.length == 0">
+      <p>Presiona Agregar estudiante para generar un nuevo registro</p>
+    </div>
+  </div>
+</div>
+
+<div class="contenedorModal" *ngIf="banderaModal">
+  <div class="contenidoModal">
+    <app-add-estudiante
+      *ngIf="mostrarCrearEst"
+      (enviarAPrincipal)="addListaEstudiantes($event)"
+      (banderaModal)="cerrarModal($event)"
+    ></app-add-estudiante>
+    <app-edit-estudiante
+      *ngIf="!mostrarCrearEst"
+      (enviarAPrincipal)="actualizarListaEstudiantes($event)"
+      [infoEstudianteEditar]="infoEstudianteEditar"
+      (banderaModal)="cerrarModal($event)"
+    ></app-edit-estudiante>
+  </div>
+</div>

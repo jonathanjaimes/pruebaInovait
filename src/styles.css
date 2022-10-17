@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+p {
+  margin: 0;
+}
+
+.btnCrear {
+  width: 100px;
+  border: none;
+  background-color: rgb(35, 163, 255);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 0 5px 0;
+  cursor: pointer;
+}
+
+.btnCancelar {
+  width: 100px;
+  border: none;
+  background-color: rgb(239, 239, 239);
+  border-radius: 5px;
+  color: rgb(104, 104, 104);
+  font-weight: 600;
+  padding: 5px 0 5px 0;
+  cursor: pointer;
+}
+
+
+.tituloModal {
+  text-align: center;
+  margin: 0;
+  padding: 30px 0 0 0;
+}
+
+.contenedorFormulario {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contenedorFormulario div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+}

@@ -1,0 +1,65 @@
+<div>
+  <div>
+    <h3 class="tituloModal">Registrar un estudiante</h3>
+  </div>
+  <form [formGroup]="formularioEstudiante" (ngSubmit)="onSubmit()">
+    <div class="contenedorFormulario">
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input
+          id="nombre"
+          type="text"
+          formControlName="nombre"
+          style="width: 240px"
+        />
+      </div>
+
+      <div>
+        <label for="apellido">Apellido: </label>
+        <input
+          id="apellido"
+          type="text"
+          formControlName="apellido"
+          style="width: 240px"
+        />
+      </div>
+
+      <div>
+        <label for="colegio">Colegio: </label>
+        <select id="colegio" formControlName="colegio" style="width: 240px">
+          <option *ngFor="let col of listaColegios" value="{{ col }}">
+            {{ col }}
+          </option>
+        </select>
+      </div>
+
+      <div>
+        <label for="grado">Grado: </label>
+        <select id="grado" formControlName="grado" style="width: 240px">
+          <option *ngFor="let grado of listaGrados" value="{{ grado }}">
+            {{ grado }}
+          </option>
+        </select>
+      </div>
+
+      <div>
+        <label for="profesor">Profesor: </label>
+        <select id="profesor" formControlName="profesor" style="width: 240px">
+          <option
+            *ngFor="let profesor of listaProfesores"
+            value="{{ profesor }}"
+          >
+            {{ profesor }}
+          </option>
+        </select>
+      </div>
+
+      <div
+        style="display: flex; justify-content: space-evenly; margin: 30px 0 0 0"
+      >
+        <button class="btnCrear" type="submit">Crear</button>
+        <button class="btnCancelar" (click)="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>
